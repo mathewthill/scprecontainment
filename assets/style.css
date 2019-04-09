@@ -1,0 +1,28 @@
+html,
+body,
+#tv {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+#tv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate3d(0, 0, -1);
+  -moz-transform: translate3d(0, 0, -1);
+  transform: translate3d(0, 0, -1);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+	z-index: -1;
+}
+
+@font-face {
+  font-family: "Strasua";
+  src: url("strasua.ttf") format("truetype");
+}
+h1 { font-family: "Strasua";
+z-index: 1;
+
+}
