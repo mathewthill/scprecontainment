@@ -11,7 +11,7 @@
 		FPS = 50,
 		scanSpeed = FPS * 15, // 15 seconds from top to bottom
 		SAMPLE_COUNT = 10;
-
+		
 	window.onresize = function() {
 		canvas.width = canvas.offsetWidth / scaleFactor;
 		canvas.height = canvas.width / (canvas.offsetWidth / canvas.offsetHeight);
