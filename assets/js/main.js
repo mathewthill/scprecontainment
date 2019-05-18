@@ -35,6 +35,10 @@
 				var settings = {
 
 					// Images (in the format of 'url': 'alignment').
+						videos: {
+							'videos/bgvid01.mp4': 'center'
+						},
+						
 						images: {
 							'images/bg01.jpg': 'center',
 							'images/bg02.jpg': 'center',
@@ -49,12 +53,32 @@
 			// Vars.
 				var	pos = 0, lastPos = 0,
 					$wrapper, $bgs = [], $bg,
-					k, v;
+					k, v, $vbg;
 
 			// Create BG wrapper, BGs.
 				$wrapper = document.createElement('div');
 					$wrapper.id = 'bg';
 					$body.appendChild($wrapper);
+					
+				for (v in settings.videos) {
+
+					// Create BG.
+						$vbg = document.createElement('video');
+							$vbg.src = v;
+							$vbg.type = "video/mp4";
+							$vbg.autoplay = true;
+							$vbg.loop = true;
+							$vbg.play = true;
+							$vbg.muted = true;
+							$vbg.style.width = "100%";
+							$vbg.style.height = "100%";
+							//$vbg.style.backgroundPosition = settings.images[k];
+							$wrapper.appendChild($vbg);
+
+					// Add it to array.
+						$bgs.push($vbg);
+
+				}
 
 				for (k in settings.images) {
 
@@ -89,12 +113,15 @@
 
 					// Swap top images.
 						$bgs[lastPos].classList.remove('top');
+						$bgs[pos].play = true;
 						$bgs[pos].classList.add('visible');
 						$bgs[pos].classList.add('top');
+						
 
 					// Hide last image after a short delay.
 						window.setTimeout(function() {
 							$bgs[lastPos].classList.remove('visible');
+							$bgs[lastPos].play = false;
 						}, settings.delay / 2);
 
 				}, settings.delay);

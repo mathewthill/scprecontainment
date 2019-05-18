@@ -45,13 +45,32 @@ blockquote, q {
 .logoimg
 {
     position: relative;
-		top: -10px;
+		top: 10px;
 }
 
-	blockquote:before, blockquote:after, q:before, q:after {
-		content: '';
-		content: none;
-	}
+@media screen and (max-width: 750px) {
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 25%;
+	width: 50%;
+	max-width: 640px;
+	max-height: 360px;
+	height: 50%;
+}
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
 
 table {
 	border-collapse: collapse;
@@ -192,7 +211,12 @@ input, select, textarea {
 		width: 100%;
 		z-index: 1;
 	}
-
+	
+		#bg video
+		{
+			object-fit: fill;
+		}
+		
 		#bg div {
 			-moz-transition: opacity 3s ease, visibility 3s;
 			-webkit-transition: opacity 3s ease, visibility 3s;
@@ -501,7 +525,7 @@ input, select, textarea {
 	}
 
 	header p {
-		color: rgba(255, 255, 255, 0.5);
+		color: rgba(255, 255, 255, 1);
 		position: relative;
 		margin: 0 0 1.5em 0;
 	}
