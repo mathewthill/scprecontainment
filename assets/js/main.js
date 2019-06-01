@@ -36,7 +36,7 @@
 
 					// Images (in the format of 'url': 'alignment').
 						videos: {
-							'videos/bgvid01.mp4': 'center'
+							'videos/bgvid01.webm': 'center'
 						},
 						
 						images: {
@@ -65,7 +65,7 @@
 					// Create BG.
 						$vbg = document.createElement('video');
 							$vbg.src = v;
-							$vbg.type = "video/mp4";
+							$vbg.type = "video/webm";
 							$vbg.autoplay = true;
 							$vbg.loop = true;
 							$vbg.play = true;
@@ -80,18 +80,18 @@
 
 				}
 
-				for (k in settings.images) {
-
-					// Create BG.
-						$bg = document.createElement('div');
-							$bg.style.backgroundImage = 'url("' + k + '")';
-							$bg.style.backgroundPosition = settings.images[k];
-							$wrapper.appendChild($bg);
-
-					// Add it to array.
-						$bgs.push($bg);
-
-				}
+				//for (k in settings.images) {
+//
+//					// Create BG.
+//						$bg = document.createElement('div');
+//							$bg.style.backgroundImage = 'url("' + k + '")';
+//							$bg.style.backgroundPosition = settings.images[k];
+//							$wrapper.appendChild($bg);
+//
+//					// Add it to array.
+//						$bgs.push($bg);
+//
+//				}
 
 			// Main loop.
 				$bgs[pos].classList.add('visible');
