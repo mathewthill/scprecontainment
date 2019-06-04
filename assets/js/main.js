@@ -38,11 +38,11 @@
 						videos: {
 							'videos/bgvid01.webm': 'center'
 						},
-						
+
 						images: {
-							'images/bg01.jpg': 'center',
-							'images/bg02.jpg': 'center',
-							'images/bg03.jpg': 'center'
+//							'images/bg01.jpg': 'center',
+	//						'images/bg02.jpg': 'center',
+		//					'images/bg03.jpg': 'center'
 						},
 
 					// Delay.
@@ -59,7 +59,7 @@
 				$wrapper = document.createElement('div');
 					$wrapper.id = 'bg';
 					$body.appendChild($wrapper);
-					
+
 				for (v in settings.videos) {
 
 					// Create BG.
@@ -116,7 +116,7 @@
 						$bgs[pos].play = true;
 						$bgs[pos].classList.add('visible');
 						$bgs[pos].classList.add('top');
-						
+
 
 					// Hide last image after a short delay.
 						window.setTimeout(function() {
