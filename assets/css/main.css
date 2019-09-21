@@ -27,8 +27,9 @@ section, summary, time, mark, audio, video {
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	margin: 12em 0 0 0;
-	display: block;}
+	margin: 40em 0 0 0;
+	display: block;
+}
 
 body {
 	line-height: 1;
@@ -50,21 +51,42 @@ blockquote, q {
 
 @media screen and (max-width: 750px) {
 
-.videoWrapper {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
-	height: 0;
+	.videoWrapper {
+		position: relative;
+		padding-bottom: 56.25%; /* 16:9 */
+		padding-top: 25px;
+		height: 0;
+	}
+	.videoWrapper iframe {
+		position: absolute;
+		top: 0;
+		left: 25%;
+		width: 50%;
+		max-width: 640px;
+		max-height: 360px;
+		height: 50%;
+	}
 }
-.videoWrapper iframe {
-	position: absolute;
-	top: 0;
-	left: 25%;
-	width: 50%;
-	max-width: 640px;
-	max-height: 360px;
-	height: 50%;
-}
+
+@media screen and (min-width: 1920px) 
+{
+	.centerleftpanel
+	{
+		display: inline-block;
+		float:left;
+		margin-left: 10%;
+	}
+	.centerrightpanel
+	{
+		display: inline-block;
+		float:right;
+		margin-right: 10%;
+	}
+	header
+	{
+		margin: 12em 0 0 0;
+		display: block;
+	}
 }
 
 blockquote:before, blockquote:after, q:before, q:after {
@@ -1159,7 +1181,7 @@ input, select, textarea {
 		transition: opacity 0.5s ease-in-out;
 		bottom: 4em;
 		color: rgba(255, 255, 255, 0.5);
-		left: 4em;
+		left: 2em;
 		opacity: 0.5;
 		position: absolute;
 	}
