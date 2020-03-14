@@ -1,0 +1,11 @@
+#newsPost
+{
+  border-style: solid;
+  border-radius: 10px;
+  border-color: #757575;
+}
+
+#newsPost h3
+{
+  text-align: center;
+}
