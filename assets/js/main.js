@@ -36,7 +36,7 @@
 
 					// Images (in the format of 'url': 'alignment').
 						videos: {
-							'videos/bgvid01.webm': 'center'
+							'videos/bgvid02.webm': 'center'
 						},
 
 						images: {
