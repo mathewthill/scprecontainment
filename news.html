@@ -11,6 +11,67 @@
   <center><h1>Recent News</h1></center>
 
   <div id="newsPost">
+    <h3>Update 0.5.21 - 02/12/2021</h3>
+  <h4>
+    Features
+    <ul style="font-family:'Modern Sans'">
+      Facility Generation
+      <ul style="font-family:'Modern Sans'">
+        <li>Rework of the zone layout system (Allows merged zones and custom zone ordering)</li>
+        <li>Rework of the elevator flow sync system (Allows automatic elevator synchronization regardless of zone ordering)</li>
+        <li>Added zone ordering system V2</li>
+        <li>Converted all euclid zone starts to new zoning checkpoint system</li>
+        <li>Added Euclid-Keter merged zone to facility generator</li>
+        <li>Added Euclid-Storage merged zone to facility generator</li>
+        <li>Added XDClassCells room (additional random spawn point for E and D Class personnel)</li>
+        <li>Added XDClassCells room to default facility generation</li>
+        <li>Added XDClassCells room to facility creator</li>
+      </ul>
+      Gameplay
+      <ul style="font-family:'Modern Sans'">
+        <li>Removed SCP 966 collision</li>
+        <li>Replaced D Class spawn locations with spawn objects</li>
+        <li>AI SCP can now navigate through open SCP keycard doors</li>
+      </ul>
+      UI
+      <ul style="font-family:'Modern Sans'">
+        <li>Added VSync option in graphics menu</li>
+      </ul>
+      Art
+      <ul style="font-family:'Modern Sans'">
+        <li>Replaced elevator button mesh</li>
+        <li>Improved zone elevator lighting</li>
+        <li>Improved SLRoom lighting</li>
+      </ul>
+    </ul>
+    Balancing
+    <ul style="font-family:'Modern Sans'">
+      <li>SCP AI can no longer open checkpoint doors to prevent instant death inside elevators</li>
+    </ul>
+    Bug Fixes
+    <ul style="font-family:'Modern Sans'">
+      <li>Fixed 049-2 being reanimated instantly on death when 049 is nearby</li>
+      <li>Improved various small nav clipping issues</li>
+      <li>Fixed occurances of Euclid zone XRoom not spawning in south direction</li>
+      <li>Fixed occurances of rooms not generating</li>
+      <li>Fixed facility generator spawning end rooms early</li>
+      <li>Fixed lighting issue when travelling outside facility interior zones</li>
+      <li>Fixed facility doors overlapping </li>
+      <li>Fixed facility rooms spawning with wrong z height</li>
+      <li>Fixed weapon status text not updating for clients</li>
+      <li>Fixed weapons not spawning for clients correctly</li>
+      <li>Fixed specific Keter zone room scaling causing non uniform generation (Improves natural loops and reduces long dead end corridors)</li>
+      <li>Reduced causes of overlapping rooms when generating faciltiies</li>
+      <li>Added delay to SCP 1499 to prevent issues when rapidly equipping and unequipping</li>
+      <li>Added save lock system to prevent saving in invalid areas (Currently used for 1499 dimension)</li>
+      <li>Fixed chance of rooms destroying themselves when loading facilities</li>
+      <li>Fixed being able to place attachments on fire extinguishers and equippable SCPs</li>
+      <li>Fixed elevator sfx not adjusting with SFX volume slider</li>
+    </ul>
+  </h4>
+  </div>
+
+  <div id="newsPost">
     <h3>Update 0.5.20 - 02/09/2021</h3>
   <h4>
     Bug Fixes
